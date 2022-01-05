@@ -1,6 +1,14 @@
 import random
+def factor(num):
+    factorial = 1
+    for i in range(2, num+1):
+        factorial *= i
+    return factorial
+
+
+
 def BiggerGreater(inp):
-    count =  (len(inp) * (len(inp) - 1)) * len(inp)
+    count =  factor(len(inp)) * len(inp)
     varity = []
     varity.append(inp)
     string = list(inp)
