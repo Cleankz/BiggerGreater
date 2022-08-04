@@ -15,7 +15,6 @@ def BiggerGreater(inp):
     varity = []
     varity.append(inp)
     string = list(inp)
-    flag = False
     for i in range(count):
         s1 = random.randint(0,(len(inp) - 1))
         s2 = random.randint(0,(len(inp) - 1))
@@ -23,12 +22,13 @@ def BiggerGreater(inp):
         if "".join(string) not in varity:
             varity.append("".join(string))
     varity.sort()
+    done = False
     for i in range(len(varity)):
         if varity[i] > inp:
-            flag = True
+            done = True
             result = varity[i]
             break
-    if flag:
+    if done:
         return result
     else:
         return ""
