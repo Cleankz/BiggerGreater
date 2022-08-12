@@ -1,5 +1,5 @@
 import random
-def factor(num):
+def factor(num): # считает факториал числа
     factorial = 1
     for i in range(2, num+1):
         try:
@@ -10,7 +10,7 @@ def factor(num):
 
 
 
-def BiggerGreater(inp):
+def BiggerGreater(inp): # функция ищет наибольшее значение
     count =  factor(len(inp)) * len(inp)
     varity = []
     varity.append(inp)
@@ -22,7 +22,7 @@ def BiggerGreater(inp):
         if "".join(string) not in varity:
             varity.append("".join(string))
     varity.sort()
-    done = False
+    done = False # флажок обозначающий что значение найдено
     for i in range(len(varity)):
         if varity[i] > inp:
             done = True
